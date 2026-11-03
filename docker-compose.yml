@@ -1,0 +1,14 @@
+services:
+  webhook-workflow:
+    build: .
+    ports:
+      - "8010:8010"
+    environment:
+      - WORKFLOW_DB_PATH=/srv/app/data/events.db
+      - WEBHOOK_API_KEY=${WEBHOOK_API_KEY:-change-me-in-prod}
+    volumes:
+      - workflow_data:/srv/app/data
+    restart: unless-stopped
+
+volumes:
+  workflow_data:

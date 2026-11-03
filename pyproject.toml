@@ -1,0 +1,9 @@
+[project]
+name = "ai-webhook-workflow-starter"
+version = "1.0.0"
+description = "FastAPI inbound AI webhook & CRM triage starter with idempotency, PII masking, prompt-injection defense, and metrics"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
